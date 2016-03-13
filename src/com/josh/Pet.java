@@ -1,5 +1,6 @@
 package com.josh;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Pet {
@@ -8,6 +9,9 @@ public class Pet {
     private String address;
     private int visits;
     private ArrayList days;
+    private String outputData;
+
+
 
 
 
@@ -52,7 +56,12 @@ public class Pet {
         this.days = days;
     }
 
-
+    public String getOutputData() {
+        return outputData;
+    }
+    public void setOutputData(String outputData) {
+        this.outputData = outputData;
+    }
 
 
     //Constructor
@@ -62,25 +71,37 @@ public class Pet {
             this.address = petAddress;
             this.visits = petVisits;
             this.days = new ArrayList<String>();
+            //this.outputData = dateOutputData;
         }
 
     public void addDays(String daysOfWeek){
         days.add(daysOfWeek);}
 
         public void output() {
+            /*ArrayList<String> dayList = new ArrayList<>();
             if (days.contains("Monday")) {
+                String outputData = ("Visit " + this.name + " " + visits + " time(s).  Address: " + address);
+                dayList.add(outputData);
+            }*/
+
+            if (days.contains("Monday")) {
+                System.out.println("Monday: ");
                 System.out.println("Visit " + this.name + " " + visits + " time(s).  Address: " + address);
             }
             if (days.contains("Tuesday")) {
+                System.out.println("Tuesday: ");
                 System.out.println("Visit " + this.name + " " + visits + " time(s).  Address: " + address);
             }
             if (days.contains("Wednesday")) {
+                System.out.println("Wednesday: ");
                 System.out.println("Visit " + this.name + " " + visits + " time(s).  Address: " + address);
             }
             if (days.contains("Thursday")) {
+                System.out.println("Thursday: ");
                 System.out.println("Visit " + this.name + " " + visits + " time(s).  Address: " + address);
             }
             if (days.contains("Friday")) {
+                System.out.println("Friday: ");
                 System.out.println("Visit " + this.name + " " + visits + " time(s).  Address: " + address);
             }
         }

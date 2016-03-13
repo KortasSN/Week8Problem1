@@ -28,6 +28,7 @@ public class PetManager {
 
         bob.addDays("Wednesday");
         bob.output();
+
         Pet coco =
                 new Pet("Coco", "cat", "789 Newton Ave", 1);
 
@@ -49,6 +50,9 @@ public class PetManager {
         sam.addDays("Thursday");
         sam.addDays("Friday");
         sam.output();
+
+
+
 
     }
 
